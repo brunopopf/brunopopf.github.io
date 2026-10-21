@@ -101,9 +101,7 @@
   <section class="impact section-wrap about section-pad" aria-labelledby="impact-title">
     <div class="impact-header">
       <p class="impact-eyebrow">SELECTED IMPACT</p>
-      <!-- <h2 id="impact-title">Real systems. Measurable outcomes.</h2> -->
       <h2>Real systems.<br><em>Measurable outcomes.</em></h2>
-
     </div>
   
     <div class="impact-grid">
@@ -139,12 +137,11 @@
     </div>
     <div class="work-list">
       <article class="work-item">
-        <div class="work-meta"><span>PAYMENTS · STRIPE · MIGRATION</span><span>01</span></div>
-        <div class="work-content"><h3>Migrating payment methods without disrupting recurring revenue.</h3>
-          <p>A multi-market migration of more than 2,000 active payment identifiers required more than moving data. The challenge was maintaining data integrity and continuity across existing payment workflows.</p>
-          <p>I worked on the migration involving Stripe payment infrastructure, handling technical edge cases and coordinating the work needed to keep recurring payment flows reliable.</p>
-          <p>The migration covered payment methods associated with approximately 80% of recurring revenue.</p>
-          <div class="work-tags"><span>APIs</span><span>Data integrity</span><span>Production workflows</span></div></div>
+        <div class="work-meta"><span>PAYMENTS SYSTEMS · PRODUCTION ENGINEERING</span><span>01</span></div>
+        <div class="work-content"><h3>Migrating ~2,000 virtual IBANs across multiple markets without disrupting operations.</h3>
+          <p>With Stripe discontinuing support for Belgian virtual IBANs, rent payment workflows across multiple markets were at risk. I took ownership of the migration beyond the code itself: identifying affected records, building reusable payment-domain logic and a TypeScript script to process them in controlled batches, validating dependent product workflows and coordinating operational follow-up alongside ongoing production support.</p>
+          <p>When I discovered that new Belgian IBANs were still being generated, I traced the issue to the creation flow, shipped a production hotfix and migrated the additional records. I then used daily database checks to verify that the issue did not recur.</p>
+          <div class="work-tags"><span>TypeScript</span><span>Stripe API</span><span>SQL</span><span>Data integrity</span></span><span>Production Debugging</span></div></div>
       </article>
       <article class="work-item">
         <div class="work-meta"><span>FINANCIAL SYSTEMS · INVESTIGATION</span><span>02</span></div>
