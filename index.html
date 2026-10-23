@@ -106,28 +106,38 @@
   
     <div class="impact-grid">
       <article class="impact-item">
-        <p class="impact-value">€300k+</p>
-        <h3>Funds recovered</h3>
-        <p>Investigated and resolved financial discrepancies across systems.</p>
+        <p class="impact-value">97%</p>
+        <h3>Payment automation rate</h3>
+        <p>Increased payment success from 90% to 97%, scaling reliability across payment workflows over a year of engineering work.</p>
+      </article>
+
+      <article class="impact-item">
+        <p class="impact-value">€5M+</p>
+        <h3>Active financial balances</h3>
+        <p>Managed and reconciled across international Stripe accounts and multi-market workflows.</p>
       </article>
   
       <article class="impact-item">
         <p class="impact-value">2,000+</p>
-        <h3>Payment identifiers</h3>
-        <p>Scale of a multi-market payment migration.</p>
+        <h3>Virtual IBANs migrated</h3>
+        <p>Executed a multi-market payment migration smoothly without disrupting user payment operations.</p>
       </article>
-  
+
       <article class="impact-item">
-        <p class="impact-value">€5M+</p>
-        <h3>Financial balances</h3>
-        <p>Managed across international accounts and workflows.</p>
+        <p class="impact-value">Minutes</p>
+        <h3>Lock setup time</h3>
+        <p>Reduced property provisioning and hardware setup times down from hours using a custom CLI tool.</p>
       </article>
+
+      <!-- <article class="impact-item"></article>
+        <p class="impact-value">€300k+</p>
+        <h3>Funds recovered</h3>
+        <p>Investigated and resolved financial discrepancies across systems.</p>
+      </article> -->
   
-      <article class="impact-item">
-        <p class="impact-value">80%</p>
-        <h3>Recurring revenue</h3>
-        <p>Associated with the Stripe payment-method migration.</p>
-      </article>
+     
+  
+   
     </div>
   </section>
   <section class="section-wrap work section-pad" id="work">
@@ -137,38 +147,25 @@
     </div>
     <div class="work-list">
       <article class="work-item">
-        <div class="work-meta"><span>PAYMENTS SYSTEMS · PRODUCTION ENGINEERING</span><span>01</span></div>
-        <div class="work-content"><h3>Migrating ~2,000 virtual IBANs across multiple markets without disrupting operations.</h3>
-          <p>With Stripe discontinuing support for Belgian virtual IBANs, rent payment workflows across multiple markets were at risk. I took ownership of the migration beyond the code itself: identifying affected records, building reusable payment-domain logic and a TypeScript script to process them in controlled batches, validating dependent product workflows and coordinating operational follow-up alongside ongoing production support.</p>
-          <p>When I discovered that new Belgian IBANs were still being generated, I traced the issue to the creation flow, shipped a production hotfix and migrated the additional records. I then used daily database checks to verify that the issue did not recur.</p>
-          <div class="work-tags"><span>TypeScript</span><span>Stripe API</span><span>SQL</span><span>Data integrity</span></span><span>Production Debugging</span></div></div>
+        <div class="work-meta"><span>PAYMENTS ENGINEERING · ARCHITECTURE</span><span>01</span></div>
+        <div class="work-content"><h3>Refactoring core payment infrastructure during critical third-party API deprecations.</h3>
+          <p>When Stripe deprecated key API versions and core payment methods, including the transition from credit transfers to bank transfers, our recurring billing engine faced severe disruption. I led the end-to-end migration of our payments core, redesigning domain logic and updating data models to support new provider objects without interrupting live payment processing.</p>
+          <p>I conducted thorough risk assessments, implemented backwards-compatible data structures, and coordinated cross-departmental testing with finance and dev teams. The migration successfully sustained uninterrupted recurring billing across all international markets while establishing stronger logging and error handling.</p>
+          <div class="work-tags"><span>TypeScript</span><span>Node.js</span><span>Stripe API</span><span>Payments Infrastructure</span><span>Data Migration</span></span><span>Production Debugging</span></div></div>
       </article>
       <article class="work-item">
-        <div class="work-meta"><span>PAYMENT SYSTEMS · STRIPE INTEGRATIONS</span><span>02</span></div>
-        <div class="work-content"><h3>Evolving payment systems across APIs, methods and markets.</h3>
-          <p>I maintained and evolved Cohabs' Stripe integrations as payment methods, APIs and market requirements changed. This involved adapting existing implementations to newer APIs, migrating legacy bank transfer integrations and moving virtual IBANs across markets.</p>
-          <p>One migration involved approximately 2,000 Belgian virtual IBANs. I built reusable payment-domain logic and a TypeScript migration script, validated dependent product workflows and coordinated the operational rollout. When new Belgian IBANs continued to be generated, I traced the issue to the creation flow, shipped a production fix and monitored the database to verify the issue did not recur.</p>
-          <div class="work-tags"><span>TypeScript</span><span>Stripe API</span><span>SQL</span><span>Data integrity</span></span><span>Production Debugging</span></div></div>
+        <div class="work-meta"><span>PAYMENT SYSTEMS · FINANCIAL RECOVERY</span><span>02</span></div>
+        <div class="work-content"><h3>Building automated recovery tooling to reconcile €300k+ in stuck funds.</h3>
+          <p>Stripe API limitations and version edge cases caused legitimate bank transfers and rent payments to freeze in uncollected draft states, creating significant financial backlogs. Since finance could not resolve these discrepancies at scale, I investigated the root causes and built custom backend scripts to automate reconciliation by linking Notion operational databases directly to the Stripe API.</p>
+          <p>The tool audited invalid entries, updated status records, and safely recreated valid invoices while preserving required accounting date ranges and metadata links. This automation recovered over €200,000 in previously uncollectible funds, removing recurring manual overhead for finance and operations teams.</p>
+          <div class="work-tags"><span>TypeScript</span><span>Node.js</span><span>Stripe API</span><span>Notion API</span><span>Financial Reconciliation</span></span><span>Backend Automation</span></div></div>
       </article>
-      <!-- <article class="work-item">
-        <div class="work-meta"><span>FINANCIAL SYSTEMS · INVESTIGATION</span><span>02</span></div>
-        <div class="work-content"><h3>Tracing financial discrepancies to recover and reconcile €300k+.</h3>
-          <p>Financial discrepancies across payment and operational systems created a problem that couldn't be solved by looking at a single dashboard or service.
-
-            I investigated the underlying data, traced inconsistencies across systems and worked with the relevant teams to resolve discrepancies and reconcile funds.
-            
-            The work contributed to recovering or reconciling more than €300,000, while improving confidence in the underlying financial workflows</p>
-          <div class="work-tags"><span>SQL</span><span>Reconciliation</span><span>Debugging</span></div></div>
-      </article> -->
       <article class="work-item">
-        <div class="work-meta"><span>INTERNAL TOOLS · NODE.JS · AUTOMATION</span><span>03</span></div>
-        <div class="work-content"><h3>Building tools to handle complex operational workflows.</h3>
-          <p>As operations expanded across markets, recurring tasks involving rent indexation, GDPR workflows and smart-lock configuration required consistent execution.
-
-            I built internal Node.js tooling to automate these workflows, reducing reliance on repetitive manual steps and making operational changes easier to execute consistently.
-            
-            The work connected backend development with the practical needs of teams managing a growing international business.</p>
-          <div class="work-tags"><span>Node.js</span><span>Automation</span><span>Internal tooling</span></div></div>
+        <div class="work-meta"><span>OPERATIONS AUTOMATION · HARDWARE INTEGRATION</span><span>03</span></div>
+        <div class="work-content"><h3>Automating smart lock provisioning to reduce setup times from hours to minutes.</h3>
+          <p>Manually configuring smart locks for newly opened properties created severe operational bottlenecks. The multi-step setup required spreadsheet mapping, manual API calls, and back-office entries, taking up to two hours per building. I took full ownership of streamlining the process by developing custom automation scripts and a unified CLI tool that interfaced directly with the Salto API and our internal core database.</p>
+          <p>I integrated automated status checking, lock assignment validation, and hardware provisioning within a single terminal workflow. This reduced onboarding times to just a few minutes per property, allowing the operations team to handle last-minute property launches on opening day without technical delays.</p>
+          <div class="work-tags"><span>TypeScript</span><span>Node.js</span><span>SaltoKS API</span><span>CLI Tooling</span><span>Process Automation</span></div></div>
       </article>
     </div>
   </section>
